@@ -38,20 +38,22 @@ function App() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Close menu when clicking outside or on scroll
+  // ✅ FIXED: Close menu logic (no instant closing bug)
   useEffect(() => {
-    const closeMenu = () => {
-      if (isMenuOpen) {
-        setIsMenuOpen(false);
-      }
+    const handleScroll = () => {
+      setIsMenuOpen(false);
     };
 
-    const handleScroll = () => closeMenu();
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Element;
-      if (!target.closest('header')) {
-        closeMenu();
-      }
+
+      // Ignore clicks on menu button
+      if (target.closest('[data-menu-button]')) return;
+
+      // Ignore clicks inside header
+      if (target.closest('header')) return;
+
+      setIsMenuOpen(false);
     };
 
     if (isMenuOpen) {

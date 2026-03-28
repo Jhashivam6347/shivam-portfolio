@@ -76,7 +76,7 @@ const Education: React.FC<EducationProps> = ({ isDarkMode }) => {
 
         {/* TIMELINE */}
         <div className="relative">
-          <div className={`absolute left-8 top-0 bottom-0 w-0.5 ${
+          <div className={`hidden sm:block absolute left-8 top-0 bottom-0 w-0.5 ${
             isDarkMode ? 'bg-gray-700' : 'bg-gray-300'
           }`}></div>
 
@@ -85,12 +85,12 @@ const Education: React.FC<EducationProps> = ({ isDarkMode }) => {
               <div key={index} className="relative flex items-start">
 
                 {/* DOT */}
-                <div className={`absolute left-6 w-4 h-4 rounded-full border-4 ${
+                <div className={`hidden sm:block absolute left-6 w-4 h-4 rounded-full border-4 ${
                   isDarkMode ? 'bg-gray-800 border-blue-500' : 'bg-white border-blue-600'
                 }`}></div>
 
                 {/* CONTENT */}
-                <div className="ml-20 flex-1">
+                <div className="ml-0 sm:ml-20 flex-1">
                   <div className={`p-6 rounded-xl border transition-all duration-300 hover:shadow-lg ${
                     isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'
                   }`}>
@@ -151,7 +151,7 @@ const Education: React.FC<EducationProps> = ({ isDarkMode }) => {
           <div className={`inline-flex items-center space-x-2 px-6 py-3 rounded-lg ${
             isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-blue-50 text-blue-700'
           }`}>
-            <GraduationCap className="h-5 w-5" />
+            <GraduationCap className="h-5 w-5 min-w-fit" />
             <span className="font-medium">
               Strong academic base with continuous focus on learning
             </span>

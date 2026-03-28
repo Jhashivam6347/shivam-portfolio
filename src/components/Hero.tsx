@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = ({ isDarkMode }) => {
 
   return (
     <section
-      className="min-h-screen flex items-center justify-center relative bg-[url('/Banner_image.JPG')] bg-cover bg-right-center"
+      className="min-h-screen flex items-center justify-center pt-[50px] sm:pt-0 relative  bg-[url('/Mobile_Banner_image.jpg')] sm:bg-[url('/Banner_image.webp')] bg-cover  sm:bg-left-center"
       aria-label="Shivam Jha Frontend Developer Portfolio"
     >
       {/* Overlay */}
@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ isDarkMode }) => {
           <h2 className={`text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 ${
             isDarkMode ? 'text-blue-400' : 'text-blue-600'
           }`}>
-            Frontend Developer | React JS Developer | JavaScript Developer | Freelance Web Developer India
+            Frontend Developer | React JS Developer | JavaScript Developer | Web Developer India
           </h2>
 
           {/* SEO DESCRIPTION */}
