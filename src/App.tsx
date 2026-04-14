@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,6 +7,7 @@ import Achievements from './components/Achievements';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Footer from './components/Footer';
+import ChatBot from './components/ChatBot';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -84,6 +85,7 @@ function App() {
       <Projects isDarkMode={isDarkMode} />
       <Education isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
+      <ChatBot isDarkMode={isDarkMode} />
     </div>
   );
 }
