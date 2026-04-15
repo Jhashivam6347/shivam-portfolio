@@ -8,10 +8,12 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
+import SplashScreen from './components/SplashScreen';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Check for saved theme preference or default to light mode
   useEffect(() => {
@@ -30,6 +32,21 @@ function App() {
       document.documentElement.classList.remove('dark');
     }
   }, [isDarkMode]);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setIsLoading(false);
+    }, 6500);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isLoading ? 'hidden' : 'auto';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isLoading]);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -86,6 +103,7 @@ function App() {
       <Education isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
       <ChatBot isDarkMode={isDarkMode} />
+      {isLoading && <SplashScreen />}
     </div>
   );
 }
