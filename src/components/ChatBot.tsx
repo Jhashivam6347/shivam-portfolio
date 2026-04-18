@@ -56,7 +56,7 @@ export default function ChatBot({ isDarkMode }: ChatBotProps) {
     setInput("");
 
     try {
-      const res = await axios.post("https://chat-bot-hk01.onrender.com/chat", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/chat`, {
         message: userMsg.text,
       });
 
@@ -92,20 +92,20 @@ export default function ChatBot({ isDarkMode }: ChatBotProps) {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className={`fixed bottom-5 right-5 p-3 rounded-full shadow-lg transition-colors ${
+          className={`fixed bottom-5 right-5 p-3 md:p-5 rounded-full shadow-lg transition-colors ${
             isDarkMode
               ? "bg-gray-800 hover:bg-gray-700 text-white"
               : "bg-blue-500 hover:bg-blue-600 text-white"
           }`}
           aria-label="Open Chat"
         >
-          <MessageCircle size={24} />
+          <MessageCircle size={54} />
         </button>
       )}
 
       {/* Chat Window */}
       {isOpen && (
-        <div className={`fixed bottom-5 right-5 w-80 shadow-xl rounded-xl p-3 ${
+        <div className={`fixed bottom-5 right-0 md:right-5 w-full md:w-[500px] shadow-xl rounded-xl p-3 ${
           isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"
         }`}>
           <div className="flex justify-between items-center mb-2">
@@ -119,7 +119,7 @@ export default function ChatBot({ isDarkMode }: ChatBotProps) {
             </button>
           </div>
 
-          <div className={`h-60 overflow-y-auto mb-2 border p-2 rounded ${
+          <div className={`h-96 overflow-y-auto mb-2 border p-2 rounded ${
             isDarkMode ? "border-gray-600" : "border-gray-300"
           }`}>
             {messages.map((msg, i) => (
