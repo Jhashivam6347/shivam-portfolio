@@ -56,7 +56,7 @@ export default function ChatBot({ isDarkMode }: ChatBotProps) {
     setInput("");
 
     try {
-      const res = await axios.post("https://chat-bot-hk01.onrender.com/chat", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/chat`, {
         message: userMsg.text,
       });
 
