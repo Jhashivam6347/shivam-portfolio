@@ -1,6 +1,6 @@
 import React from 'react';
 import { Moon, Sun, Download, Menu, X } from 'lucide-react';
-import resume from '/Shivam-Resume.pdf';
+import resume from '/Jha-Shivam-(Develpoer).pdf';
 
 interface HeaderProps {
   isDarkMode: boolean;

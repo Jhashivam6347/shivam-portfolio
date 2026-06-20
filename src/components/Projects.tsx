@@ -76,8 +76,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
     <section
       id="projects"
       aria-label="Projects and work experience of Shivam Jha frontend developer"
-      className={`py-20 ${
-        isDarkMode ? 'bg-gray-900' : 'bg-gray-50'
+      className={`py-20 glass-panel ${
+        isDarkMode ? 'bg-slate-950/65 border border-white/10' : 'bg-white/25 border border-white/20'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -182,8 +182,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`p-6 rounded-xl border transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 ${
-                  isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
+                className={`p-6 rounded-3xl glass-card transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 ${
+                  isDarkMode ? 'border-white/10' : 'border-white/20'
                 }`}
               >
                 <div className="flex items-center space-x-3 mb-4">

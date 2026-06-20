@@ -32,8 +32,8 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
   };
 
   return (
-    <footer className={`py-12 ${
-      isDarkMode ? 'bg-gray-900 border-t border-gray-700' : 'bg-gray-50 border-t border-gray-200'
+    <footer className={`py-12 glass-panel ${
+      isDarkMode ? 'bg-slate-950/70 border border-white/10' : 'bg-white/25 border border-white/20'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-8">

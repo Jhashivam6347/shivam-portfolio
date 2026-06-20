@@ -10,8 +10,8 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
     <section
       id="about"
       aria-label="About Shivam Jha Frontend Developer"
-      className={`py-20 ${
-        isDarkMode ? 'bg-gray-800' : 'bg-white'
+      className={`py-20 glass-panel ${
+        isDarkMode ? 'bg-slate-950/60 border border-white/10' : 'bg-white/30 border border-white/20'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,8 +32,8 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
           <div className="space-y-6">
 
             {/* WHO I AM */}
-            <div className={`p-6 rounded-xl border transition-all duration-300 hover:shadow-lg ${
-              isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'
+            <div className={`p-6 rounded-3xl glass-card transition-all duration-300 hover:shadow-xl ${
+              isDarkMode ? 'border-white/10' : 'border-white/20'
             }`}>
               <div className="flex items-center space-x-4 mb-4">
                 <div className="p-3 bg-blue-600 rounded-lg">
@@ -52,8 +52,8 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
             </div>
 
             {/* OBJECTIVE */}
-            <div className={`p-6 rounded-xl border transition-all duration-300 hover:shadow-lg ${
-              isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'
+            <div className={`p-6 rounded-3xl glass-card transition-all duration-300 hover:shadow-xl ${
+              isDarkMode ? 'border-white/10' : 'border-white/20'
             }`}>
               <div className="flex items-center space-x-4 mb-4">
                 <div className="p-3 bg-purple-600 rounded-lg">
@@ -72,8 +72,8 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className={`p-8 rounded-2xl border transition-all duration-300 hover:shadow-lg ${
-            isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'
+          <div className={`p-8 rounded-3xl glass-card transition-all duration-300 hover:shadow-xl ${
+            isDarkMode ? 'border-white/10' : 'border-white/20'
           }`}>
             <div className="flex items-center space-x-4 mb-6">
               <div className="p-3 bg-teal-600 rounded-lg">

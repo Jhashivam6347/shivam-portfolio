@@ -36,7 +36,7 @@ function App() {
   useEffect(() => {
     const timer = window.setTimeout(() => {
       setIsLoading(false);
-    }, 6500);
+    }, 3500);
 
     return () => window.clearTimeout(timer);
   }, []);
@@ -96,13 +96,25 @@ function App() {
         toggleMenu={toggleMenu}
       />
       <Hero isDarkMode={isDarkMode} />
-      <About isDarkMode={isDarkMode} />
-      <Skills isDarkMode={isDarkMode} />
-      <Achievements isDarkMode={isDarkMode} />
-      <Projects isDarkMode={isDarkMode} />
-      <Education isDarkMode={isDarkMode} />
-      <Footer isDarkMode={isDarkMode} />
-      <ChatBot isDarkMode={isDarkMode} />
+
+      <main className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -left-24 top-16 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl animate-background-drift" />
+          <div className="absolute right-0 top-1/4 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl animate-background-drift delay-200" />
+          <div className="absolute left-1/2 bottom-0 h-96 w-96 -translate-x-1/2 rounded-full bg-cyan-400/20 blur-3xl animate-background-drift delay-400" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.08),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.08),_transparent_30%),radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.08),_transparent_30%)]" />
+        </div>
+
+        <div className="relative">
+          <About isDarkMode={isDarkMode} />
+          <Skills isDarkMode={isDarkMode} />
+          <Achievements isDarkMode={isDarkMode} />
+          <Projects isDarkMode={isDarkMode} />
+          <Education isDarkMode={isDarkMode} />
+          <Footer isDarkMode={isDarkMode} />
+          <ChatBot isDarkMode={isDarkMode} />
+        </div>
+      </main>
       {isLoading && <SplashScreen />}
     </div>
   );

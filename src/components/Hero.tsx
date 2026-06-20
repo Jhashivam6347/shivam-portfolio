@@ -89,7 +89,7 @@ const Hero: React.FC<HeroProps> = ({ isDarkMode }) => {
           {/* CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="/Shivam-Resume.pdf"
+              href="/Jha-Shivam-(Develpoer).pdf"
               download="Shivam_Jha_Resume.pdf"
               aria-label="Download Shivam Jha Frontend Developer Resume"
               className="flex items-center space-x-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-200 transform hover:scale-105"
