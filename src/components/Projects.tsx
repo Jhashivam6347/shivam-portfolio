@@ -11,7 +11,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       company: 'Variance Infotech',
       role: 'Frontend Developer',
       period: 'Jan 2025 – Present',
-      location: 'India',
+      location: 'Ahmedabad',
       description: 'Working as a frontend developer, building responsive web applications using React, JavaScript, and modern UI frameworks. Focused on performance, clean UI, and user experience.',
       technologies: [ 'HTML', 'CSS', 'JavaScript', 'React' , 'Bootstrap' , 'Tailwind'],
       status: 'current'
@@ -20,7 +20,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       company: 'Sky Productivity',
       role: 'Developer Intern',
       period: 'Jun 2024 – Aug 2024',
-      location: 'Remote',
+      location: 'Ahmedabad',
       description: 'Worked on backend development using .NET and C#, building APIs and understanding MVC architecture in real-world projects.',
       technologies: ['.NET', 'C#', 'API', 'MVC'],
       status: 'completed'
@@ -46,29 +46,36 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   ];
 
   const projects = [
+
+    {
+      title: 'Realtime Chat App',
+      type: 'Full Stack Web Application',
+      description: 'A real-time chat application that allows users to communicate instantly. Built with React, Node.js, Express, MongoDB, and Socket.IO with authentication and live messaging features.',
+      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'JWT Authentication', 'Tailwind CSS'],
+      link: 'https://realtime-chat-app-theta-fawn.vercel.app/',
+    },
+
     {
       title: 'Document Classifier',
       type: 'Machine Learning Project',
       description: 'A machine learning project built with Python that classifies documents based on content. It helped me understand real-world use of NLP and data processing.',
-      technologies: ['Python', 'Machine Learning', 'NLP']
+      technologies: ['Python', 'Machine Learning', 'NLP'],
     },
     {
       title: 'EduCheck System',
       type: 'Web Application',
       description: 'A web-based system designed for managing educational data. Built using core web technologies with a focus on usability and clean UI.',
-      technologies: ['HTML', 'JavaScript', 'CSS' ,'Python']
-    },
-    {
-      title: 'Weather Report',
-      type: 'Frontend Web Application',
-      description: 'A responsive weather app that shows real-time data using APIs. Built with JavaScript and designed to work smoothly across devices.',
-      technologies: ['HTML', 'CSS', 'JavaScript']
+      technologies: ['HTML', 'JavaScript', 'CSS' ,'Python'],
+     
+      cursor:'none',
     },
     {
       title: 'Café Management System',
       type: 'Desktop Application',
       description: 'A Java-based application to manage café operations including billing and inventory, connected with a MySQL database.',
-      technologies: ['Java', 'MySQL']
+      technologies: ['Java', 'MySQL'],
+     
+      cursor:'none',
     }
   ];
 
@@ -179,46 +186,65 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className={`p-6 rounded-3xl glass-card transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 ${
-                  isDarkMode ? 'border-white/10' : 'border-white/20'
-                }`}
-              >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="p-2 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg">
-                    <ExternalLink className="h-5 w-5 text-white" />
+            {projects.map((project, index) => {
+              const cardContent = (
+                <>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="p-2 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg">
+                      <ExternalLink className="h-5 w-5 text-white" />
+                    </div>
+
+                    <div>
+                      <h4 className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                        {project.title}
+                      </h4>
+                      <span className={`text-sm ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>
+                        {project.type}
+                      </span>
+                    </div>
                   </div>
 
-                  <div>
-                    <h4 className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                      {project.title}
-                    </h4>
-                    <span className={`text-sm ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>
-                      {project.type}
-                    </span>
+                  <p className={`mb-4 leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'
+                        }`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-                </div>
+                </>
+              );
 
-                <p className={`mb-4 leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'
-                      }`}
+              return (
+                <div
+                  key={index}
+                  className={`p-6 rounded-3xl glass-card transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 ${
+                    isDarkMode ? 'border-white/10' : 'border-white/20'
+                  } ${project.link ? '' : 'cursor-none pointer-events-none'}`}
+                >
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="decoration-none cursor-pointer"
                     >
-                      {tech}
-                    </span>
-                  ))}
+                      {cardContent}
+                    </a>
+                  ) : (
+                    <div className="decoration-none cursor-none pointer-events-none">{cardContent}</div>
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

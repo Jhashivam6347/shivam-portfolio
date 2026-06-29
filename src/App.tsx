@@ -108,8 +108,8 @@ function App() {
         <div className="relative">
           <About isDarkMode={isDarkMode} />
           <Skills isDarkMode={isDarkMode} />
-          <Achievements isDarkMode={isDarkMode} />
           <Projects isDarkMode={isDarkMode} />
+           <Achievements isDarkMode={isDarkMode} />
           <Education isDarkMode={isDarkMode} />
           <Footer isDarkMode={isDarkMode} />
           <ChatBot isDarkMode={isDarkMode} />
