@@ -45,13 +45,13 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
               </div>
 
               <p className={`leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                I am Shivam Jha, a passionate Frontend Developer from India with expertise in HTML, CSS, JavaScript, and React.js. 
-                I build modern, responsive, and SEO-friendly web applications that deliver high performance and great user experience. 
-                I also have working knowledge of Angular, backend technologies like Java, Python, and databases such as MySQL.
+                I’m Shivam Jha, a Frontend Developer with 1.5+ years of professional experience building responsive,
+                interactive web applications with React.js, Next.js, JavaScript, HTML, CSS, and Tailwind CSS. I focus
+                on reusable UI components, polished interactions, and consistent user experiences.
               </p>
             </div>
 
-            {/* OBJECTIVE */}
+            {/* CURRENT FOCUS */}
             <div className={`p-6 rounded-3xl glass-card transition-all duration-300 hover:shadow-xl ${
               isDarkMode ? 'border-white/10' : 'border-white/20'
             }`}>
@@ -97,23 +97,16 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
               <div className={`text-center p-4 rounded-lg ${
                 isDarkMode ? 'bg-gray-800' : 'bg-white'
               }`}>
-                <div className="text-2xl font-bold text-purple-600 mb-1">4+</div>
+                <div className="text-2xl font-bold text-purple-600 mb-1">1.5+</div>
                 <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Internships
+                  Years of Experience
                 </div>
               </div>
             </div>
             
             <p className={`leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              I specialize in frontend development using React.js and modern JavaScript frameworks. 
-              I create fast, responsive, and user-friendly web applications optimized for performance and SEO. 
-              I also work on full-stack development, making me capable of handling end-to-end project development.
-            </p>
-
-            {/* HIDDEN SEO BOOST */}
-            <p className="sr-only">
-              Hire Frontend Developer India, React Developer Portfolio, JavaScript Developer India, 
-              Freelance Web Developer India, Full Stack Developer Portfolio Shivam Jha
+              I build responsive frontend experiences with React.js and Next.js, integrating services such as Google
+              reCAPTCHA and IP-based country detection. I also collaborate through Git workflows and CI/CD pipelines.
             </p>
 
           </div>

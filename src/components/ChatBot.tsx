@@ -27,13 +27,13 @@ export default function ChatBot({ isDarkMode }: ChatBotProps) {
   const text = msg.toLowerCase();
 
   if (text.includes("who are you"))
-    return "I am Shivam Jha, a Full Stack Developer based in Ahmedabad.";
+    return "I’m Shivam Jha, a Frontend Developer with 1.5+ years of professional experience building web applications with React.js and Next.js.";
 
   if (text.includes("skills"))
-    return "I work with React, Node.js, MongoDB, Tailwind CSS.";
+    return "I work with React.js, Next.js, JavaScript, Node.js, MongoDB, Tailwind CSS, Framer Motion, WordPress, WebSockets, and WebRTC.";
 
   if (text.includes("experience"))
-    return "I have around 1 year of experience.";
+    return "I’m currently a Frontend Developer at Variance Infotech, contributing to SmartSync, Verbix.ai, and Wowchat.";
 
   if (text.includes("projects"))
     return "I built real-time chat apps using Socket.io and WebRTC.";
@@ -66,7 +66,7 @@ export default function ChatBot({ isDarkMode }: ChatBotProps) {
       };
 
       setMessages((prev) => [...prev, botMsg]);
-    } catch (err) {
+    } catch {
       setMessages((prev) => [
         ...prev,
         {

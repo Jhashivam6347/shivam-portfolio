@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Database, Server } from 'lucide-react';
+import { Code2, Workflow, Wrench } from 'lucide-react';
 
 interface SkillsProps {
   isDarkMode: boolean;
@@ -10,19 +10,19 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
     {
       title: 'Frontend',
       icon: Code2,
-      skills: ['HTML', 'CSS', 'JavaScript', 'React.js', 'jQuery', 'Bootstrap', 'Tailwind', 'SASS'],
+      skills: ['JavaScript (ES6+)', 'HTML5', 'CSS3', 'React.js', 'Next.js', 'Tailwind CSS', 'Bootstrap', 'jQuery','SASS', 'Framer Motion'],
       color: 'blue'
     },
     {
-      title: 'Backend (Basics)',
-      icon: Server,
-      skills: ['Python','Node.js'],
+      title: 'Integrations & Real-Time',
+      icon: Workflow,
+      skills: ['Google reCAPTCHA', 'IP-Based Country Detection', 'Dynamic Pricing', 'Multilingual Support', 'WebSockets', 'WebRTC'],
       color: 'purple'
     },
     {
-      title: 'Database',
-      icon: Database,
-      skills: ['MySQL' , 'MongoDB'],
+      title: 'Tools & Databases',
+      icon: Wrench,
+      skills: ['MySQL' , 'MongoDB','Git', 'GitHub', 'GitHub Actions', 'CI/CD Pipelines', 'WordPress'],
       color: 'teal'
     }
   ];
@@ -86,7 +86,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
 
           {/* subtle SEO text (natural, not spammy) */}
           <p className="sr-only">
-            Frontend Developer skills including React.js, JavaScript, Tailwind CSS, Node.js, and modern web development tools.
+            Frontend development skills including React.js, Next.js, JavaScript, Tailwind CSS, integrations, and WordPress.
           </p>
         </div>
 

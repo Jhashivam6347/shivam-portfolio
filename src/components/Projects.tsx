@@ -12,8 +12,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       role: 'Frontend Developer',
       period: 'Jan 2025 – Present',
       location: 'Ahmedabad',
-      description: 'Working as a frontend developer, building responsive web applications using React, JavaScript, and modern UI frameworks. Focused on performance, clean UI, and user experience.',
-      technologies: [ 'HTML', 'CSS', 'JavaScript', 'React' , 'Bootstrap' , 'Tailwind'],
+      description: 'Build responsive web applications with React.js, Next.js, JavaScript, and Tailwind CSS, contributing frontend features for SmartSync, Verbix.ai, and Wowchat.co Implement multilingual experiences, Google reCAPTCHA, IP-based country detection, dynamic pricing, and country-specific content. Support Wowchat CI/CD workflows and maintain WordPress websites and blogs for Saleshiker, CRMTiger, and Variance Infotech.',
+      technologies: ['React.js', 'Next.js', 'JavaScript', 'Tailwind CSS', 'Framer Motion', 'Google reCAPTCHA', 'WordPress', 'CI/CD'],
       status: 'current'
     },
     {

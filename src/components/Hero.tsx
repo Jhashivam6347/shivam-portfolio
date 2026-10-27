@@ -38,21 +38,16 @@ const Hero: React.FC<HeroProps> = ({ isDarkMode }) => {
           <h2 className={`text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 ${
             isDarkMode ? 'text-blue-400' : 'text-blue-600'
           }`}>
-            Frontend Developer | React JS Developer | JavaScript Developer | Web Developer India
+            Frontend Developer | React JS Developer | JavaScript Developer | Next.js Developer 
           </h2>
 
           {/* SEO DESCRIPTION */}
           <p className={`text-lg sm:text-xl max-w-3xl mx-auto mb-8 leading-relaxed ${
             isDarkMode ? 'text-gray-300' : 'text-white'
           }`}>
-            I am Shivam Jha, a Frontend Developer based in India specializing in React.js, JavaScript, and modern web development. 
-            I build fast, scalable, and SEO-friendly web applications for startups and businesses.
-          </p>
-
-          {/* HIDDEN SEO BOOST */}
-          <p className="sr-only">
-            Shivam Jha Frontend Developer India, React Developer Portfolio, Hire Web Developer India, 
-            Freelance Frontend Developer, JavaScript Expert Developer Portfolio
+            I’m Shivam Jha, a Frontend Developer with 1.5+ years of professional experience building responsive,
+            interactive web applications with React.js, Next.js, JavaScript, and Tailwind CSS. I create reusable
+            interfaces and engaging user experiences for products and businesses.
           </p>
 
           {/* CONTACT */}
