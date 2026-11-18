@@ -66,12 +66,27 @@ export default function ChatBot({ isDarkMode }: ChatBotProps) {
       };
 
       setMessages((prev) => [...prev, botMsg]);
-    } catch {
+    } catch (error: unknown) {
+      let reply = fallbackReplies(userMsg.text);
+      let warning = "The chat service is unavailable. Please try again later.";
+
+      if (axios.isAxiosError(error)) {
+        const responseData: unknown = error.response?.data;
+        if (typeof responseData === "object" && responseData !== null) {
+          if ("reply" in responseData && typeof responseData.reply === "string") {
+            reply = responseData.reply;
+          }
+          if ("error" in responseData && typeof responseData.error === "string") {
+            warning = responseData.error;
+          }
+        }
+      }
+
       setMessages((prev) => [
         ...prev,
         {
           sender: "bot",
-          text: fallbackReplies(userMsg.text),
+          text: `${reply}\n\n${warning}`,
         },
       ]);
     } finally {
